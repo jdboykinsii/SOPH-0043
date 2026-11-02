@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - North Star Bakery</title>
+  <meta name="description" content="Welcome to North Star Bakery. Discover our traditional sourdough, daily pastries, location, and hours.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Accessible Skip Navigation Link -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Header & Navigation -->
+<header class="site-header">
+  <div class="header-container">
+    <a href="index.html" class="brand-link">
+      <img src="img/bakery-logo.png" alt="North Star Bakery logo" class="site-logo">
+      <span>North Star Bakery</span>
+    </a>
+    <nav class="main-nav" aria-label="Main Navigation">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact & Pre-Orders</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main id="main-content" class="main-content">
+
+  <!-- Welcome Message Section -->
+  <section class="hero-banner" aria-labelledby="welcome-heading">
+    <h1 id="welcome-heading">Welcome to North Star Bakery</h1>
+    <p>Baking fresh, naturally fermented sourdough and handcrafted pastries every single morning with locally sourced organic grains.</p>
+
+    <!-- Audio Welcome Message with Fallback Text -->
+    <div class="media-player-block">
+      <h2>Audio Welcome Message</h2>
+      <audio controls src="media/bakery-welcome.mp3">
+        <p>Your browser does not support the audio element. <strong>Transcript:</strong> "Welcome to North Star Bakery! Stop by our shop on Main Street for fresh sourdough loaves and pastries baked daily."</p>
+      </audio>
+    </div>
+  </section>
+
+  <!-- Grid Layout for What We're Known For & Hours -->
+  <div class="grid-2">
+    <!-- What We're Known For -->
+    <section aria-labelledby="known-for-heading" class="card">
+      <h2 id="known-for-heading">What We’re Known For</h2>
+      <p>Our bakery is celebrated for time-honored baking techniques, long-fermentation doughs, and zero artificial additives:</p>
+      <ul>
+        <li><strong>36-Hour Sourdough:</strong> Deep flavor and gentle digestion.</li>
+        <li><strong>Laminated Pastries:</strong> 100% real European-style butter layers.</li>
+        <li><strong>Community Grain Sourcing:</strong> Milled fresh from regional organic farms.</li>
+      </ul>
+    </section>
+
+    <!-- Hours and Location Snippet -->
+    <section aria-labelledby="hours-location-heading" class="card">
+      <h2 id="hours-location-heading">Hours & Location</h2>
+      <p><strong>Address:</strong> 1234 E Spooner St, Bakery District</p>
+      <p><strong>Baking Hours:</strong></p>
+      <ul>
+        <li>Tuesday – Friday: 6:30 AM – 3:00 PM</li>
+        <li>Saturday – Sunday: 7:00 AM – 2:00 PM</li>
+        <li>Monday: Closed for milling & maintenance</li>
+      </ul>
+      <p><a href="contact.html">Get full directions or place a pre-order &rarr;</a></p>
+    </section>
+  </div>
+
+  <!-- Featured Item of the Week using <picture> element -->
+  <section aria-labelledby="featured-heading" style="margin-top: 2rem;">
+    <h2 id="featured-heading">Featured Item of the Week</h2>
+    <p>Each week our master baker highlights a seasonal creation. This week we present our Seasonal Harvest Pastry Box.</p>
+
+    <picture class="featured-picture-wrapper">
+      <source media="(min-width: 768px)" srcset="img/bakery-feature-large.png">
+      <img src="img/bakery-feature-small.png" alt="Seasonal Harvest Pastry Box featuring fresh fruit danishes and almond croissants">
+    </picture>
+  </section>
+
+  <!-- Signature Loaf Figure with Caption -->
+  <section aria-labelledby="signature-heading" style="margin-top: 2rem;">
+    <h2 id="signature-heading">Our Pride & Joy</h2>
+    <figure>
+      <img src="img/bakery-signature-loaf.png" alt="Crusty golden sourdough loaf with an intricate scored leaf pattern on top">
+      <figcaption>Figure 1: Our Signature Country Loaf — crafted with a 10-year sourdough culture, scoring a crisp caramelized crust and open interior crumb.</figcaption>
+    </figure>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div>
+      <p><strong>North Star Bakery</strong></p>
+      <p>1234 E Spooner St, Bakery District</p>
+    </div>
+    <div>
+      <p>&copy; 2026 North Star Bakery. All rights reserved.</p>
+      <p><a href="contact.html">Contact Us</a> | <a href="#main-content">Back to Top</a></p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

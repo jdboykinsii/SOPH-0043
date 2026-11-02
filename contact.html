@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Pre-Orders - North Star Bakery</title>
+  <meta name="description" content="Send an inquiry or submit a pre-order request to North Star Bakery. View hours and location info for 1234 E Spooner St.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header class="site-header">
+  <div class="header-container">
+    <a href="index.html" class="brand-link">
+      <img src="img/bakery-logo.png" alt="North Star Bakery logo" class="site-logo">
+      <span>North Star Bakery</span>
+    </a>
+    <nav class="main-nav" aria-label="Main Navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html" aria-current="page">Contact & Pre-Orders</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content" class="main-content">
+
+  <h1>Contact Us & Pre-Order Request</h1>
+  <p>Have a question or want to reserve bread for weekend pickup? Fill out the form below. <em>Please allow 24-hour notice for pre-order requests.</em></p>
+
+  <div class="grid-2">
+
+    <!-- Contact & Pre-Order Form -->
+    <section aria-labelledby="form-heading" class="form-container">
+      <h2 id="form-heading">Inquiry & Pre-Order Form</h2>
+
+      <form action="#" method="post" aria-describedby="form-instructions">
+        <p id="form-instructions" style="font-size: 0.9rem; color: var(--color-text-muted);">
+          Fields marked with an asterisk (<span class="required" aria-hidden="true">*</span>) are required.
+        </p>
+
+        <!-- Name Field -->
+        <div class="form-group">
+          <label for="user-name">Full Name <span class="required" aria-hidden="true">*</span></label>
+          <input type="text" id="user-name" name="name" class="form-control" required aria-required="true" autocomplete="name">
+        </div>
+
+        <!-- Email Field -->
+        <div class="form-group">
+          <label for="user-email">Email Address <span class="required" aria-hidden="true">*</span></label>
+          <input type="email" id="user-email" name="email" class="form-control" required aria-required="true" autocomplete="email">
+        </div>
+
+        <!-- Pickup Date -->
+        <div class="form-group">
+          <label for="pickup-date">Requested Pickup Date <span class="required" aria-hidden="true">*</span></label>
+          <input type="date" id="pickup-date" name="pickup_date" class="form-control" required aria-required="true">
+        </div>
+
+        <!-- Request Type Select -->
+        <div class="form-group">
+          <label for="request-type">Request Type <span class="required" aria-hidden="true">*</span></label>
+          <select id="request-type" name="request_type" class="form-control" required aria-required="true">
+            <option value="">-- Please select an option --</option>
+            <option value="preorder">Pre-Order Reservation</option>
+            <option value="general">General Question</option>
+            <option value="catering">Event & Catering Inquiry</option>
+          </select>
+        </div>
+
+        <!-- Item Details Textarea -->
+        <div class="form-group">
+          <label for="item-details">Item Details & Quantity <span class="required" aria-hidden="true">*</span></label>
+          <textarea id="item-details" name="item_details" class="form-control" placeholder="e.g., 2 Country Sourdough Loaves, 4 Cardamom Buns" required aria-required="true"></textarea>
+        </div>
+
+        <!-- Allergy Notes Textarea -->
+        <div class="form-group">
+          <label for="allergy-notes">Allergy Notes & Dietary Requests (Optional)</label>
+          <textarea id="allergy-notes" name="allergy_notes" class="form-control" placeholder="Please list any severe nut, dairy, or gluten sensitivities..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Submit Request</button>
+      </form>
+    </section>
+
+    <!-- Location & Hours Section -->
+    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+
+      <section aria-labelledby="loc-info-heading" class="card">
+        <h2 id="loc-info-heading">Location Information</h2>
+        <p><strong>North Star Bakery</strong></p>
+        <p>1234 E Spooner St</p>
+        <p><strong>Phone:</strong> (555) 019-2834</p>
+        <p><strong>Email:</strong> <a href="mailto:hello@northstarbakery.com"> hello@northstarbakery.com</a></p>
+      </section>
+
+      <section aria-labelledby="hours-info-heading" class="card">
+        <h2 id="hours-info-heading">Hours of Operation</h2>
+        <ul>
+          <li><strong>Tuesday – Friday:</strong> 6:30 AM – 3:00 PM</li>
+          <li><strong>Saturday – Sunday:</strong> 7:00 AM – 2:00 PM</li>
+          <li><strong>Monday:</strong> Closed</li>
+        </ul>
+      </section>
+
+    </div>
+
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div>
+      <p><strong>North Star Bakery</strong></p>
+      <p>1234 E Spooner St</p>
+    </div>
+    <div>
+      <p>&copy; 2026 North Star Bakery. All rights reserved.</p>
+      <p><a href="#main-content">Back to Top</a></p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
