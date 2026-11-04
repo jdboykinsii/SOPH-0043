@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Products - North Star Bakery</title>
-  <meta name="description" content="Explore our artisanal product offerings at North Star Bakery, including sourdough breads, french pastries, and custom celebration cakes.">
+  <meta name="description" content="Explore and filter artisanal sourdough breads, pastries, and cakes at North Star Bakery.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<a href="#main-content" class="skip-link">Skip to main content</a>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
 <header class="site-header">
   <div class="header-container">
@@ -28,92 +28,40 @@
   </div>
 </header>
 
-<main id="main-content" class="main-content">
+  <main id="main-content" class="main-content">
 
-  <h1>Our Product Categories & Offerings</h1>
-  <p>All items are freshly baked each morning. Please note: <em>We operate an in-store counter service and pre-order pickup system; online checkout is not required.</em></p>
+    <h1>Our Product Categories & Offerings</h1>
+    <p>All items are freshly baked each morning. Please note: <em>We operate an in-store counter service and pre-order pickup system; online checkout is not required.</em></p>
 
-  <!-- Category 1: Breads -->
-  <section aria-labelledby="breads-heading" style="margin-bottom: 3rem;">
-    <h2 id="breads-heading">Artisanal Breads</h2>
-    <div class="grid-3">
+    <!-- Interactive Category Filter & Live Search Bar -->
+    <div class="filter-controls-container">
 
-      <article class="card">
-        <img src="img/bakery-bread.png" alt="Basket of freshly baked artisan sourdough loaves and rolls">
-        <h3>Country Sourdough Loaf</h3>
-        <p>Our flagship bread made with 100% stone-ground flour, water, sea salt, and wild yeast starter.</p>
-        <span class="price-range">Pricing: $7.50 – $9.00</span>
-      </article>
+      <div id="product-filter-controls" class="filter-btn-group" aria-label="Product Category Filters">
+        <button type="button" class="filter-btn active-filter" data-filter="all" aria-pressed="true">All Items</button>
+        <button type="button" class="filter-btn" data-filter="breads" aria-pressed="false">Breads</button>
+        <button type="button" class="filter-btn" data-filter="pastries" aria-pressed="false">Pastries</button>
+        <button type="button" class="filter-btn" data-filter="cakes" aria-pressed="false">Cakes</button>
+        <button type="button" class="filter-btn" data-filter="sourdough" aria-pressed="false">Sourdough</button>
+      </div>
 
-      <article class="card">
-        <img src="img/bakery-signature-loaf.png" alt="Signature dark crusty rye sourdough loaf">
-        <h3>Heritage Seeded Rye</h3>
-        <p>Dense sourdough rye packed with toasted flax, sunflower, and pumpkin seeds.</p>
-        <span class="price-range">Pricing: $8.50 – $10.00</span>
-      </article>
-
-      <article class="card">
-        <img src="img/bakery-bread.png" alt="Fresh French Baguettes with crispy golden crust">
-        <h3>Traditional French Baguette</h3>
-        <p>Crispy crust with an airy interior, baked twice daily for breakfast and lunch service.</p>
-        <span class="price-range">Pricing: $4.00 – $4.50</span>
-      </article>
+      <div class="search-input-wrapper">
+        <label for="product-search" class="visually-hidden" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;">Search products</label>
+        <input type="search" id="product-search" class="form-control" placeholder="Search by keyword (e.g. rye, chocolate)...">
+      </div>
 
     </div>
-  </section>
 
-  <!-- Category 2: Pastries -->
-  <section aria-labelledby="pastries-heading" style="margin-bottom: 3rem;">
-    <h2 id="pastries-heading">Flaky Pastries & Viennoiserie</h2>
-    <div class="grid-3">
+    <!-- Screen-Reader Live Announcement Region -->
+    <div id="results-count" class="results-count-status" role="status" aria-live="polite">
+      Showing all products.
+    </div>
 
-      <article class="card">
-        <img src="img/bakery-feature-small.png" alt="Golden flaky butter croissant">
-        <h3>Classic Butter Croissant</h3>
-        <p>Laminated with Normandy butter, creating 27 delicate, crispy layers.</p>
-        <span class="price-range">Pricing: $3.75 – $4.25</span>
-      </article>
-
-      <article class="card">
-        <img src="img/bakery-feature-small.png" alt="Pain au chocolat pastry with dark chocolate core">
-        <h3>Pain au Chocolat</h3>
-        <p>Filled with two batons of 64% Valrhona dark chocolate inside laminated dough.</p>
-        <span class="price-range">Pricing: $4.50 – $5.00</span>
-      </article>
-
-      <article class="card">
-        <img src="img/bakery-feature-small.png" alt="Cardamom and cinnamon knot pastry">
-        <h3>Cardamom Bun</h3>
-        <p>Swedish-style twisted bun flavored with freshly ground green cardamom and coarse sugar.</p>
-        <span class="price-range">Pricing: $4.00 – $4.50</span>
-      </article>
+    <!-- Dynamic Product Cards Grid Container -->
+    <div id="products-grid" class="grid-3">
 
     </div>
-  </section>
 
-  <!-- Category 3: Cakes -->
-  <section aria-labelledby="cakes-heading">
-    <h2 id="cakes-heading">Celebration Cakes & Tarts</h2>
-    <div class="grid-3">
-
-      <article class="card">
-        <img src="img/bakery-storefront.png" alt="Layered dark chocolate cake with berry topping">
-        <h3>Seasonal Fruit Tart</h3>
-        <p>Sweet pastry shell lined with vanilla bean pastry cream and fresh seasonal fruit.</p>
-        <span class="price-range">Pricing: $28.00 – $45.00</span>
-      </article>
-
-      <article class="card">
-        <img src="img/bakery-storefront.png" alt="Rich chocolate ganache layer cake">
-        <h3>Dark Chocolate Olive Oil Cake</h3>
-        <p>Moist flourless chocolate cake enriched with extra virgin olive oil and sea salt.</p>
-        <span class="price-range">Pricing: $35.00 – $50.00</span>
-      </article>
-
-    </div>
-  </section>
-
-</main>
+  </main>
 
 <footer class="site-footer">
   <div class="footer-container">
@@ -128,5 +76,6 @@
   </div>
 </footer>
 
+  <script src="js/app.js"></script>
 </body>
 </html>
